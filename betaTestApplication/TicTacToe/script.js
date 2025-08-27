@@ -1,6 +1,7 @@
 let currentPlayer = "X";
 let board = ["", "", "", "", "", "", "", "", ""];
 let gameActive = true;
+const themeButton = document.getElementById('theme-button')
 
 const cells = document.querySelectorAll(".cell");
 const statusText = document.getElementById("status");
@@ -50,3 +51,8 @@ function resetGame() {
   cells.forEach(cell => cell.textContent = "");
   statusText.textContent ="Giliran:X";
 }
+
+
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+})
