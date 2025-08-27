@@ -18,8 +18,10 @@ cells.forEach(cell => {
       board[index] = currentPlayer;
       cell.textContent = currentPlayer;
       checkWinner();
-      currentPlayer = currentPlayer === "X" ? "O" : "X";
-      statusText.textContent = `Giliran: ${currentPlayer}`;
+      if(gameActive){
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        statusText.textContent = `Giliran: ${currentPlayer}`;
+      }
     }
   });
 });
